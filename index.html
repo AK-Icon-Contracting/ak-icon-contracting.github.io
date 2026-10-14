@@ -32,7 +32,7 @@
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
-            padding-top: 140px; /* ফিক্সড ব্যানারের জন্য ওপরের জায়গা */
+            padding-top: 140px;
         }
 
         @media(max-width: 768px) {
@@ -41,7 +41,7 @@
             }
         }
 
-        /* Fixed Banner Header (Stays at the top) */
+        /* Fixed Banner Header - Full Width with matching background */
         .ak-fixed-banner {
             position: fixed;
             top: 0;
@@ -55,7 +55,7 @@
         }
 
         .ak-banner-container {
-            max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -67,24 +67,27 @@
             height: auto;
             max-height: 130px;
             display: block;
-            object-fit: contain;
+            object-fit: cover; /* দুই পাশের খালি ভাব দূর করার জন্য কভার করা হলো */
         }
 
-        /* Floating Language Switcher Button (Moved to Bottom-Left / Above WhatsApp) */
+        /* Floating Language Switcher Button with Globe Icon */
         .ak-lang-floating {
             position: fixed;
-            bottom: 95px; /* হোয়াটসঅ্যাপ আইকনের ঠিক ওপরে */
+            bottom: 95px;
             right: 25px;
             background-color: var(--navy-card);
             color: var(--gold);
             border: 2px solid var(--gold);
-            padding: 10px 16px;
+            padding: 9px 14px;
             font-weight: 800;
             border-radius: 30px;
             cursor: pointer;
             font-size: 0.85rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 6px;
             transition: all 0.3s ease;
         }
 
@@ -99,7 +102,7 @@
             transform: scale(1.05);
         }
 
-        /* Floating WhatsApp Button (Bottom-Right) */
+        /* Floating WhatsApp Button */
         .ak-whatsapp-floating {
             position: fixed;
             width: 55px;
@@ -295,8 +298,10 @@
         </div>
     </div>
 
-    <!-- Floating Language Switcher Button (At bottom right, right above WhatsApp) -->
-    <button class="ak-lang-floating" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
+    <!-- Floating Language Switcher Button with Globe Symbol -->
+    <button class="ak-lang-floating" onclick="toggleLanguage()" id="lang-toggle-btn">
+        <span>🌐</span> <span id="lang-text">العربية</span>
+    </button>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/97455830871" class="ak-whatsapp-floating" target="_blank" title="Chat on WhatsApp">
@@ -428,7 +433,7 @@
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 
             const l = content[currentLang];
-            document.getElementById('lang-toggle-btn').innerText = l.langBtn;
+            document.getElementById('lang-text').innerText = l.langBtn;
             document.getElementById('hero-title').innerText = l.heroTitle;
             document.getElementById('hero-subtitle').innerText = l.heroSubtitle;
             document.getElementById('about-title').innerText = l.aboutTitle;
