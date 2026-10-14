@@ -35,12 +35,30 @@
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
+            /* Padding top added so content doesn't hide behind fixed header */
+            padding-top: 220px; 
         }
 
-        /* Clean Top Bar for Language Switcher */
+        @media(max-width: 768px) {
+            body {
+                padding-top: 150px;
+            }
+        }
+
+        /* Fixed Top Section (Language Bar + Banner Wrapper) */
+        .sticky-header-group {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+
+        /* Professional Top Language Bar */
         .top-lang-bar {
             background-color: #040a12;
-            padding: 8px 15px;
+            padding: 6px 15px;
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -51,11 +69,11 @@
             background-color: var(--navy-card);
             color: var(--gold);
             border: 1.5px solid var(--gold);
-            padding: 5px 16px;
+            padding: 4px 14px;
             font-weight: 700;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             transition: all 0.3s ease;
         }
 
@@ -68,8 +86,6 @@
         .header-wrapper {
             background-color: #EFE9DE;
             border-bottom: 3px solid var(--gold);
-            position: relative;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             width: 100%;
             overflow: hidden;
         }
@@ -87,6 +103,7 @@
         .header-banner-img {
             width: 100%;
             height: auto;
+            max-height: 150px;
             display: block;
             object-fit: contain;
         }
@@ -284,17 +301,17 @@
 </head>
 <body>
 
-    <!-- Professional Top Language Bar -->
-    <div class="top-lang-bar">
-        <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
-    </div>
-
-    <!-- Header Banner Section -->
-    <header class="header-wrapper">
-        <div class="header-container">
-            <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="header-banner-img">
+    <!-- Fixed Top Group (Language Bar + Banner) -->
+    <div class="sticky-header-group">
+        <div class="top-lang-bar">
+            <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
         </div>
-    </header>
+        <header class="header-wrapper">
+            <div class="header-container">
+                <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="header-banner-img">
+            </div>
+        </header>
+    </div>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/97455830871" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
