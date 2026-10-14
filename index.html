@@ -37,6 +37,33 @@
             line-height: 1.6;
         }
 
+        /* Clean Top Bar for Language Switcher */
+        .top-lang-bar {
+            background-color: #040a12;
+            padding: 8px 15px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .lang-btn {
+            background-color: var(--navy-card);
+            color: var(--gold);
+            border: 1.5px solid var(--gold);
+            padding: 5px 16px;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+
         /* Header Banner Section */
         .header-wrapper {
             background-color: #EFE9DE;
@@ -62,35 +89,6 @@
             height: auto;
             display: block;
             object-fit: contain;
-        }
-
-        /* Language Toggle Button overlay nicely on Header */
-        .lang-btn {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #081220;
-            color: var(--gold);
-            border: 1.5px solid var(--gold);
-            padding: 6px 14px;
-            font-weight: 800;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 10;
-        }
-
-        [dir="rtl"] .lang-btn {
-            right: auto;
-            left: 15px;
-        }
-
-        .lang-btn:hover {
-            background-color: var(--gold);
-            color: #081220;
         }
 
         /* Floating WhatsApp Button using robust SVG */
@@ -286,11 +284,15 @@
 </head>
 <body>
 
-    <!-- Header Banner Section with Integrated Language Button -->
+    <!-- Professional Top Language Bar -->
+    <div class="top-lang-bar">
+        <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
+    </div>
+
+    <!-- Header Banner Section -->
     <header class="header-wrapper">
         <div class="header-container">
             <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="header-banner-img">
-            <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
         </div>
     </header>
 
