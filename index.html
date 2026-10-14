@@ -35,26 +35,45 @@
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
-            /* পেজ লোড হওয়ার পর নিচের কনটেন্ট যেন ব্যানারের নিচে ঢাকা না পড়ে, তাই মার্জিন দেওয়া হলো */
-            padding-top: 155px;
         }
 
-        @media(max-width: 768px) {
-            body {
-                padding-top: 110px;
-            }
-        }
-
-        /* Fixed Banner & Language Button Container */
-        .fixed-header-container {
+        /* Floating Language Switcher Button (Fixed at top-left or top-right corner) */
+        .floating-lang-btn {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+            top: 20px;
+            right: 20px;
+            background-color: var(--navy-card);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            padding: 8px 16px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
             z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        [dir="rtl"] .floating-lang-btn {
+            right: auto;
+            left: 20px;
+        }
+
+        .floating-lang-btn:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+            transform: scale(1.05);
+        }
+
+        /* Header Banner Section (Clean and unobstructed) */
+        .header-wrapper {
             background-color: #EFE9DE;
             border-bottom: 3px solid var(--gold);
+            position: relative;
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            width: 100%;
+            overflow: hidden;
         }
 
         .header-container {
@@ -70,38 +89,8 @@
         .header-banner-img {
             width: 100%;
             height: auto;
-            max-height: 150px;
             display: block;
             object-fit: contain;
-        }
-
-        /* Language Button positioned over the top-right space of the banner */
-        .lang-btn {
-            position: absolute;
-            right: 18px;
-            top: 35%;
-            transform: translateY(-50%);
-            background-color: #081220;
-            color: var(--gold);
-            border: 1.5px solid var(--gold);
-            padding: 5px 14px;
-            font-weight: 800;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.75rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 10;
-        }
-
-        [dir="rtl"] .lang-btn {
-            right: auto;
-            left: 18px;
-        }
-
-        .lang-btn:hover {
-            background-color: var(--gold);
-            color: #081220;
         }
 
         /* Floating WhatsApp Button */
@@ -297,13 +286,15 @@
 </head>
 <body>
 
-    <!-- Fixed Header Container (Banner + Language Switcher Button together) -->
-    <div class="fixed-header-container">
+    <!-- Floating Language Switcher Button (Always on top-right corner of screen) -->
+    <button class="floating-lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
+
+    <!-- Header Banner Section (Clean and 100% visible) -->
+    <header class="header-wrapper">
         <div class="header-container">
             <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="header-banner-img">
-            <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
         </div>
-    </div>
+    </header>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/97455830871" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
