@@ -32,7 +32,7 @@
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
-            padding-top: 140px; /* কনটেন্ট যেন ফিক্সড ব্যানারের নিচে ঢাকা না পড়ে */
+            padding-top: 140px; /* ফিক্সড ব্যানারের জন্য ওপরের জায়গা */
         }
 
         @media(max-width: 768px) {
@@ -41,7 +41,7 @@
             }
         }
 
-        /* Fixed Banner Header */
+        /* Fixed Banner Header (Stays at the top) */
         .ak-fixed-banner {
             position: fixed;
             top: 0;
@@ -70,35 +70,36 @@
             object-fit: contain;
         }
 
-        /* Floating Language Switcher Button (Independent at Top-Right) */
+        /* Floating Language Switcher Button (Moved to Bottom-Left / Above WhatsApp) */
         .ak-lang-floating {
             position: fixed;
-            top: 15px;
-            right: 15px;
+            bottom: 95px; /* হোয়াটসঅ্যাপ আইকনের ঠিক ওপরে */
+            right: 25px;
             background-color: var(--navy-card);
             color: var(--gold);
             border: 2px solid var(--gold);
-            padding: 6px 14px;
+            padding: 10px 16px;
             font-weight: 800;
-            border-radius: 6px;
+            border-radius: 30px;
             cursor: pointer;
-            font-size: 0.8rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            font-size: 0.85rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             z-index: 1000;
             transition: all 0.3s ease;
         }
 
         [dir="rtl"] .ak-lang-floating {
             right: auto;
-            left: 15px;
+            left: 25px;
         }
 
         .ak-lang-floating:hover {
             background-color: var(--gold);
             color: var(--navy);
+            transform: scale(1.05);
         }
 
-        /* Floating WhatsApp Button */
+        /* Floating WhatsApp Button (Bottom-Right) */
         .ak-whatsapp-floating {
             position: fixed;
             width: 55px;
@@ -294,7 +295,7 @@
         </div>
     </div>
 
-    <!-- Floating Language Switcher Button -->
+    <!-- Floating Language Switcher Button (At bottom right, right above WhatsApp) -->
     <button class="ak-lang-floating" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
 
     <!-- Floating WhatsApp Button -->
