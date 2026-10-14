@@ -36,16 +36,16 @@
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
-            padding-top: 110px;
+            padding-top: 105px;
         }
 
         @media(max-width: 768px) {
             body {
-                padding-top: 95px;
+                padding-top: 90px;
             }
         }
 
-        /* Fixed Top Banner / Header (Matching exact AK Icon Banner Image) */
+        /* Fixed Top Banner / Header displaying header-banner.jpg */
         header {
             position: fixed;
             top: 0;
@@ -74,7 +74,7 @@
             }
         }
 
-        /* Hero Section with Construction Background & Golden Text */
+        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(9, 21, 38, 0.65), rgba(9, 21, 38, 0.85)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=85');
             background-size: cover;
@@ -323,7 +323,7 @@
             transform: translateY(-2px);
         }
 
-        /* Floating Language & WhatsApp Widgets (Exact placement from original screenshot) */
+        /* Floating Language & WhatsApp Widgets */
         .floating-widgets {
             position: fixed;
             bottom: 25px;
@@ -425,7 +425,7 @@
 
     <!-- Fixed Header / Banner -->
     <header>
-        <img src="https://raw.githubusercontent.com/RJD-Contracting/rjd-website/main/ak-icon-banner.png" alt="AK ICON TRADING & CONTRACTING CO. W.L.L." class="header-banner-img" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/RJD-Contracting/rjd-website/main/rjd-logo.png';">
+        <img src="header-banner.jpg" alt="AK ICON TRADING & CONTRACTING CO. W.L.L." class="header-banner-img">
     </header>
 
     <!-- Hero Section -->
@@ -556,14 +556,14 @@
                 <div class="contact-info">
                     <p><strong><span id="c-company">AK Icon Trading & Contracting Co. W.L.L.</span></strong></p>
                     <p>📍 <span id="c-location">Doha, Qatar</span></p>
-                    <p>📧 Email: <a href="mailto:info@akicon.qa">info@akicon.qa</a></p>
-                    <p>📲 WhatsApp: <a href="https://wa.me/97450098805" target="_blank">+974 5009 8805</a></p>
+                    <p>📧 Email: <a href="mailto:akicontc@gmail.com">akicontc@gmail.com</a> / <a href="mailto:akicontc@yahoo.com">akicontc@yahoo.com</a></p>
+                    <p>📲 WhatsApp: <a href="https://wa.me/97455830871" target="_blank">+974 558 30871</a></p>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Floating Language and WhatsApp Widgets (Matching Screenshot) -->
+    <!-- Floating Language and WhatsApp Widgets -->
     <div class="floating-widgets">
         <button class="floating-lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
         <button class="whatsapp-main-btn" onclick="openDirectWhatsapp()" aria-label="WhatsApp Chat">
@@ -704,7 +704,7 @@
         }
 
         function openDirectWhatsapp() {
-            window.open('https://wa.me/97450098805?text=Hello%20AK%20Icon%20Team,%20I%20am%20inquiring%20from%20your%20website.', '_blank');
+            window.open('https://wa.me/97455830871?text=Hello%20AK%20Icon%20Team,%20I%20am%20inquiring%20from%20your%20website.', '_blank');
         }
 
         function submitRfq(event) {
@@ -723,7 +723,7 @@
 
             const msg = `Hello AK Icon Estimation Team,%0AI would like to submit a Quotation / BOQ Enquiry.%0A%0A*Name / Company:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Category:* ${encodeURIComponent(service)}%0A*Email:* ${encodeURIComponent(email)}%0A*File Status:* ${encodeURIComponent(fileNotice)}%0A*Project Details:* ${encodeURIComponent(details)}`;
             
-            window.open(`https://wa.me/97450098805?text=${msg}`, '_blank');
+            window.open(`https://wa.me/97455830871?text=${msg}`, '_blank');
         }
     </script>
 </body>
