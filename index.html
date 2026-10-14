@@ -35,7 +35,7 @@
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
-            /* ব্যানারটি যেহেতু ফিক্সড, তাই নিচের কনটেন্ট যেন ব্যানারের নিচে ঢাকা না পড়ে সেজন্য পোপর দিকে মার্জিন রাখা হলো */
+            /* ব্যানার যেহেতু ফিক্সড, নিচের কনটেন্ট যেন ব্যানারের নিচে ঢাকা না পড়ে তাই মার্জিন দেওয়া হলো */
             padding-top: 155px;
         }
 
@@ -45,7 +45,7 @@
             }
         }
 
-        /* 1. Fixed Banner Container (Stays in place, doesn't scroll) */
+        /* 1. Fixed Banner Container (Stays permanently at the top) */
         .fixed-banner-container {
             position: fixed;
             top: 0;
@@ -75,19 +75,19 @@
             object-fit: contain;
         }
 
-        /* 2. Floating Language Switcher Button (Like WhatsApp icon, fixed on screen) */
+        /* 2. Floating Language Switcher Button (Completely outside banner, fixed at top-right) */
         .floating-lang-btn {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px;
             background-color: var(--navy-card);
             color: var(--gold);
             border: 2px solid var(--gold);
-            padding: 8px 16px;
+            padding: 7px 15px;
             font-weight: 800;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.6);
             z-index: 1000;
             transition: all 0.3s ease;
@@ -95,7 +95,7 @@
 
         [dir="rtl"] .floating-lang-btn {
             right: auto;
-            left: 20px;
+            left: 15px;
         }
 
         .floating-lang-btn:hover {
@@ -297,14 +297,14 @@
 </head>
 <body>
 
-    <!-- 1. Fixed Banner Container (Stays completely in place) -->
+    <!-- 1. Fixed Banner Container (Stays in place at the top) -->
     <div class="fixed-banner-container">
         <div class="header-container">
             <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="header-banner-img">
         </div>
     </div>
 
-    <!-- 2. Floating Language Switcher Button (Like WhatsApp, fixed on screen) -->
+    <!-- 2. Floating Language Switcher Button (Fixed at top-right corner, completely independent of the banner) -->
     <button class="floating-lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
 
     <!-- 3. Floating WhatsApp Button -->
