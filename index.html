@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
@@ -37,7 +40,34 @@
             line-height: 1.6;
         }
 
-        /* Top Header Wrapper - Full responsive fix */
+        /* Top Bar for Language Switcher */
+        .top-bar {
+            background-color: #040a12;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .lang-btn {
+            background-color: var(--navy-card);
+            color: var(--gold);
+            border: 1.5px solid var(--gold);
+            padding: 5px 14px;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+
+        /* Header Banner Section */
         .header-wrapper {
             background-color: #EFE9DE;
             border-bottom: 3px solid var(--gold);
@@ -64,38 +94,40 @@
             object-fit: contain;
         }
 
-        /* Language Toggle Button overlay on Header */
-        .lang-btn {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #081220;
-            color: #D4AF37;
-            border: 2px solid #D4AF37;
-            padding: 6px 14px;
-            font-weight: 800;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8rem;
+        /* Floating WhatsApp Icon */
+        .whatsapp-float {
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 10;
         }
 
-        [dir="rtl"] .lang-btn {
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: scale(1.1);
+        }
+
+        [dir="rtl"] .whatsapp-float {
             right: auto;
-            left: 15px;
+            left: 25px;
         }
 
-        .lang-btn:hover {
-            background-color: #D4AF37;
-            color: #081220;
-        }
-
-        /* Hero Section */
+        /* Hero Section - Background clarity adjusted */
         .hero {
-            background: linear-gradient(rgba(8, 18, 32, 0.92), rgba(8, 18, 32, 0.92)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(8, 18, 32, 0.70), rgba(8, 18, 32, 0.70)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
             color: var(--white);
             padding: 60px 20px;
             text-align: center;
@@ -246,25 +278,26 @@
             font-size: 0.85rem;
             border-top: 1px solid rgba(212, 175, 55, 0.1);
         }
-
-        @media(max-width: 600px) {
-            .lang-btn {
-                padding: 4px 10px;
-                font-size: 0.7rem;
-                right: 8px;
-            }
-        }
     </style>
 </head>
 <body>
+
+    <!-- Top Navigation Bar for Language Switcher -->
+    <div class="top-bar">
+        <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
+    </div>
 
     <!-- Header Banner Section -->
     <header class="header-wrapper">
         <div class="header-container">
             <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="header-banner-img">
-            <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
         </div>
     </header>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/97455830871" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <!-- Hero Section -->
     <section class="hero">
