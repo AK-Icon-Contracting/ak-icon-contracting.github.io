@@ -11,9 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome for WhatsApp Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
@@ -38,33 +35,6 @@
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
-        }
-
-        /* Top Bar for Language Switcher */
-        .top-bar {
-            background-color: #040a12;
-            padding: 8px 20px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .lang-btn {
-            background-color: var(--navy-card);
-            color: var(--gold);
-            border: 1.5px solid var(--gold);
-            padding: 5px 14px;
-            font-weight: 700;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.8rem;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            background-color: var(--gold);
-            color: var(--navy);
         }
 
         /* Header Banner Section */
@@ -94,7 +64,36 @@
             object-fit: contain;
         }
 
-        /* Floating WhatsApp Icon */
+        /* Language Toggle Button overlay nicely on Header */
+        .lang-btn {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #081220;
+            color: var(--gold);
+            border: 1.5px solid var(--gold);
+            padding: 6px 14px;
+            font-weight: 800;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        [dir="rtl"] .lang-btn {
+            right: auto;
+            left: 15px;
+        }
+
+        .lang-btn:hover {
+            background-color: var(--gold);
+            color: #081220;
+        }
+
+        /* Floating WhatsApp Button using robust SVG */
         .whatsapp-float {
             position: fixed;
             width: 55px;
@@ -103,9 +102,8 @@
             right: 25px;
             background-color: #25d366;
             color: #FFF;
-            border-radius: 50px;
+            border-radius: 50%;
             text-align: center;
-            font-size: 30px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             z-index: 100;
             display: flex;
@@ -125,7 +123,13 @@
             left: 25px;
         }
 
-        /* Hero Section - Background clarity adjusted */
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: #FFFFFF;
+        }
+
+        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(8, 18, 32, 0.70), rgba(8, 18, 32, 0.70)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
             color: var(--white);
@@ -282,21 +286,17 @@
 </head>
 <body>
 
-    <!-- Top Navigation Bar for Language Switcher -->
-    <div class="top-bar">
-        <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
-    </div>
-
-    <!-- Header Banner Section -->
+    <!-- Header Banner Section with Integrated Language Button -->
     <header class="header-wrapper">
         <div class="header-container">
             <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="header-banner-img">
+            <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
         </div>
     </header>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/97455830871" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
 
     <!-- Hero Section -->
