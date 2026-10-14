@@ -35,59 +35,26 @@
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
-            /* Padding top added so content doesn't hide behind fixed header */
-            padding-top: 220px; 
+            /* পেজ লোড হওয়ার পর নিচের কনটেন্ট যেন ব্যানারের নিচে ঢাকা না পড়ে, তাই মার্জিন দেওয়া হলো */
+            padding-top: 155px;
         }
 
         @media(max-width: 768px) {
             body {
-                padding-top: 150px;
+                padding-top: 110px;
             }
         }
 
-        /* Fixed Top Section (Language Bar + Banner Wrapper) */
-        .sticky-header-group {
+        /* Fixed Banner & Language Button Container */
+        .fixed-header-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-        }
-
-        /* Professional Top Language Bar */
-        .top-lang-bar {
-            background-color: #040a12;
-            padding: 6px 15px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .lang-btn {
-            background-color: var(--navy-card);
-            color: var(--gold);
-            border: 1.5px solid var(--gold);
-            padding: 4px 14px;
-            font-weight: 700;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.75rem;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            background-color: var(--gold);
-            color: var(--navy);
-        }
-
-        /* Header Banner Section */
-        .header-wrapper {
             background-color: #EFE9DE;
             border-bottom: 3px solid var(--gold);
-            width: 100%;
-            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
 
         .header-container {
@@ -108,7 +75,36 @@
             object-fit: contain;
         }
 
-        /* Floating WhatsApp Button using robust SVG */
+        /* Language Button positioned over the top-right space of the banner */
+        .lang-btn {
+            position: absolute;
+            right: 18px;
+            top: 35%;
+            transform: translateY(-50%);
+            background-color: #081220;
+            color: var(--gold);
+            border: 1.5px solid var(--gold);
+            padding: 5px 14px;
+            font-weight: 800;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        [dir="rtl"] .lang-btn {
+            right: auto;
+            left: 18px;
+        }
+
+        .lang-btn:hover {
+            background-color: var(--gold);
+            color: #081220;
+        }
+
+        /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
             width: 55px;
@@ -120,7 +116,7 @@
             border-radius: 50%;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            z-index: 100;
+            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -301,16 +297,12 @@
 </head>
 <body>
 
-    <!-- Fixed Top Group (Language Bar + Banner) -->
-    <div class="sticky-header-group">
-        <div class="top-lang-bar">
+    <!-- Fixed Header Container (Banner + Language Switcher Button together) -->
+    <div class="fixed-header-container">
+        <div class="header-container">
+            <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="header-banner-img">
             <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
         </div>
-        <header class="header-wrapper">
-            <div class="header-container">
-                <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="header-banner-img">
-            </div>
-        </header>
     </div>
 
     <!-- Floating WhatsApp Button -->
