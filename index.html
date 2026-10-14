@@ -37,12 +37,14 @@
             line-height: 1.6;
         }
 
-        /* Top Header Wrapper */
+        /* Top Header Wrapper - Full responsive fix */
         .header-wrapper {
             background-color: #EFE9DE;
             border-bottom: 3px solid var(--gold);
             position: relative;
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            width: 100%;
+            overflow: hidden;
         }
 
         .header-container {
@@ -52,30 +54,30 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
 
         .header-banner-img {
             width: 100%;
             height: auto;
-            max-height: 180px;
-            object-fit: contain;
             display: block;
+            object-fit: contain;
         }
 
         /* Language Toggle Button overlay on Header */
         .lang-btn {
             position: absolute;
-            right: 20px;
+            right: 15px;
             top: 50%;
             transform: translateY(-50%);
             background-color: #081220;
             color: #D4AF37;
             border: 2px solid #D4AF37;
-            padding: 8px 18px;
+            padding: 6px 14px;
             font-weight: 800;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             z-index: 10;
@@ -83,7 +85,7 @@
 
         [dir="rtl"] .lang-btn {
             right: auto;
-            left: 20px;
+            left: 15px;
         }
 
         .lang-btn:hover {
@@ -247,9 +249,9 @@
 
         @media(max-width: 600px) {
             .lang-btn {
-                padding: 5px 10px;
-                font-size: 0.75rem;
-                right: 10px;
+                padding: 4px 10px;
+                font-size: 0.7rem;
+                right: 8px;
             }
         }
     </style>
@@ -259,7 +261,6 @@
     <!-- Header Banner Section -->
     <header class="header-wrapper">
         <div class="header-container">
-            <!-- এখানে ফাইলের নাম হুবহু গিটহবের নামের সাথে ছোট হাতের অক্ষরে মিলিয়ে দেওয়া হয়েছে -->
             <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="header-banner-img">
             <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
         </div>
