@@ -3,168 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AK Icon Trading & Contracting Co. W.L.L. | Qatar</title>
-    
-    <!-- Google Corporate Font -->
+    <title>AK Icon | MEP & Civil Construction Solutions in Qatar</title>
+    <meta name="description" content="AK Icon provides MEP contracting, civil construction, fit-out, construction manpower supply, and building facility management services in Qatar.">
+
+    <!-- Google Corporate Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --navy: #081220;
-            --navy-light: #0F1F38;
-            --navy-card: #162B4C;
-            --gold: #D4AF37;
-            --light-gold: #F3E5AB;
+            --navy: #061325;
+            --navy-light: #0B1E38;
+            --navy-card: #122B4F;
+            --accent-blue: #1E3A8A;
+            --light-bg: #F4EEDC;
             --white: #FFFFFF;
             --text-gray: #E2E8F0;
+            --whatsapp-green: #25D366;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Montserrat', sans-serif !important;
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif !important;
+            font-style: normal !important;
         }
 
         body {
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
-            padding-top: 140px;
+            padding-top: 130px;
         }
 
         @media(max-width: 768px) {
             body {
-                padding-top: 100px;
+                padding-top: 105px;
             }
         }
 
-        /* Fixed Banner Header - Full Width with matching background */
-        .ak-fixed-banner {
+        /* Fixed Header / Banner */
+        header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 900;
-            background-color: #EFE9DE;
-            border-bottom: 3px solid var(--gold);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-            text-align: center;
-        }
-
-        .ak-banner-container {
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .ak-banner-img {
-            width: 100%;
-            height: auto;
-            max-height: 130px;
-            display: block;
-            object-fit: cover; /* দুই পাশের খালি ভাব দূর করার জন্য কভার করা হলো */
-        }
-
-        /* Floating Language Switcher Button with Globe Icon */
-        .ak-lang-floating {
-            position: fixed;
-            bottom: 95px;
-            right: 25px;
-            background-color: var(--navy-card);
-            color: var(--gold);
-            border: 2px solid var(--gold);
-            padding: 9px 14px;
-            font-weight: 800;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             z-index: 1000;
+            background-color: var(--light-bg);
+            padding: 10px 15px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--accent-blue);
+            gap: 12px;
+        }
+
+        .brand-container {
             display: flex;
             align-items: center;
-            gap: 6px;
-            transition: all 0.3s ease;
+            gap: 12px;
+            flex-grow: 1;
+            min-width: 0;
         }
 
-        [dir="rtl"] .ak-lang-floating {
-            right: auto;
-            left: 25px;
-        }
-
-        .ak-lang-floating:hover {
-            background-color: var(--gold);
-            color: var(--navy);
-            transform: scale(1.05);
-        }
-
-        /* Floating WhatsApp Button */
-        .ak-whatsapp-floating {
-            position: fixed;
-            width: 55px;
-            height: 55px;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25d366;
-            color: #FFF;
+        .logo-img {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            z-index: 1000;
+            object-fit: cover;
+            border: 2px solid var(--navy);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+            background-color: var(--white);
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            min-width: 0;
+            flex-grow: 1;
+        }
+
+        [dir="rtl"] .logo {
+            text-align: right;
+        }
+
+        .logo-main-title {
+            font-family: 'Cinzel', serif !important;
+            font-size: 1.4rem;
+            background: linear-gradient(180deg, #122B4F 0%, #061325 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .logo-sub-title {
+            font-size: 0.54rem;
+            color: #0B1E38;
+            letter-spacing: 0.6px;
+            font-weight: 800;
+            margin-top: 2px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .logo-loc-box {
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            gap: 4px;
+            margin-top: 2px;
         }
 
-        .ak-whatsapp-floating:hover {
-            background-color: #20ba5a;
-            transform: scale(1.1);
+        .logo-loc-box::before, .logo-loc-box::after {
+            content: '';
+            display: inline-block;
+            height: 1px;
+            width: 8px;
+            background-color: #0B1E38;
         }
 
-        [dir="rtl"] .ak-whatsapp-floating {
-            right: auto;
-            left: 25px;
+        .logo-loc {
+            font-size: 0.46rem;
+            color: #0B1E38;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
-        .ak-whatsapp-floating svg {
-            width: 32px;
-            height: 32px;
-            fill: #FFFFFF;
+        /* Language Button */
+        .lang-btn {
+            background-color: var(--navy);
+            color: var(--white);
+            border: 2px solid var(--accent-blue);
+            padding: 7px 12px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+        }
+
+        .lang-btn:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-2px);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(8, 18, 32, 0.70), rgba(8, 18, 32, 0.70)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(6, 19, 37, 0.65), rgba(6, 19, 37, 0.80)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: var(--white);
-            padding: 60px 20px;
+            padding: 110px 20px;
             text-align: center;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 3px solid var(--accent-blue);
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
         }
 
         .hero h2 {
-            font-size: 1.8rem;
-            color: var(--gold);
+            font-size: 2.3rem;
+            color: var(--white);
             margin-bottom: 15px;
-            font-weight: 800;
+            line-height: 1.3;
+            font-weight: 900;
+            text-shadow: 0 3px 15px rgba(0,0,0,0.9);
         }
 
         .hero p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             margin-bottom: 25px;
-            max-width: 850px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
             color: var(--text-gray);
-            font-weight: 500;
+            font-weight: 600;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.9);
         }
 
-        /* Container & Grid */
+        /* Containers & Sections */
         .container {
             padding: 45px 20px;
             max-width: 1100px;
@@ -173,7 +208,7 @@
 
         .section-title {
             text-align: center;
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 35px;
             position: relative;
             font-size: 1.6rem;
@@ -185,10 +220,11 @@
             display: block;
             width: 60px;
             height: 3px;
-            background-color: var(--gold);
+            background-color: var(--accent-blue);
             margin: 10px auto 0;
         }
 
+        /* Cards Grid */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -203,18 +239,32 @@
 
         .card {
             background: var(--navy-card);
-            border-top: 4px solid var(--gold);
+            border-top: 4px solid var(--accent-blue);
             border-radius: 8px;
             padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-left: 1px solid rgba(30, 58, 138, 0.25);
+            border-right: 1px solid rgba(30, 58, 138, 0.25);
+            border-bottom: 1px solid rgba(30, 58, 138, 0.25);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+            border-color: var(--accent-blue);
         }
 
         .card h3 {
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 15px;
             font-size: 1.25rem;
             font-weight: 800;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .card ul {
@@ -238,7 +288,7 @@
 
         .card ul li::before {
             content: '✓';
-            color: var(--gold);
+            color: var(--white);
             position: absolute;
             left: 0;
             font-weight: bold;
@@ -249,18 +299,158 @@
             right: 0;
         }
 
+        /* Quick RFQ / BOQ Submission Form Section */
+        .rfq-section {
+            background: var(--navy-light);
+            border: 2px solid var(--accent-blue);
+            border-radius: 12px;
+            padding: 40px 30px;
+            margin-top: 50px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .rfq-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 25px;
+            width: 100%;
+        }
+
+        @media(min-width: 768px) {
+            .rfq-form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.92rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .form-control {
+            background: var(--navy);
+            border: 1px solid rgba(30, 58, 138, 0.5);
+            border-radius: 6px;
+            padding: 12px 15px;
+            color: var(--white);
+            font-size: 0.95rem;
+            outline: none;
+            width: 100%;
+            transition: border-color 0.2s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 8px rgba(30, 58, 138, 0.5);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        /* Custom File Input Field Styling */
+        .file-input-container {
+            position: relative;
+            background: var(--navy);
+            border: 2px dashed var(--accent-blue);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-input-container:hover {
+            background: rgba(30, 58, 138, 0.2);
+            border-color: #3b82f6;
+        }
+
+        .file-input-container input[type="file"] {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .file-input-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .file-input-label span.upload-icon {
+            font-size: 1.8rem;
+        }
+
+        .selected-file-name {
+            color: var(--whatsapp-green);
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-top: 6px;
+            word-break: break-all;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--navy-card) 100%);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.05rem;
+            width: 100%;
+            transition: transform 0.2s, opacity 0.2s;
+            grid-column: 1 / -1;
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
         .contact-box {
             background: var(--navy-light);
             color: var(--white);
             padding: 40px 25px;
             border-radius: 8px;
             text-align: center;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(30, 58, 138, 0.4);
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            margin-top: 40px;
         }
 
         .contact-box h3 {
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 20px;
             font-size: 1.4rem;
             font-weight: 800;
@@ -274,154 +464,286 @@
         }
 
         .contact-info a {
-            color: var(--light-gold);
+            color: var(--white);
             text-decoration: none;
             font-weight: 700;
         }
 
+        /* Floating WhatsApp Widget */
+        .whatsapp-float-container {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+        }
+
+        .whatsapp-main-btn {
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            cursor: pointer;
+            border: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-main-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-main-btn svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
         footer {
-            background: #040a12;
+            background: #030a14;
             color: #888;
             text-align: center;
             padding: 20px;
             font-size: 0.85rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            border-top: 1px solid rgba(30, 58, 138, 0.2);
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Fixed Banner at Top -->
-    <div class="ak-fixed-banner">
-        <div class="ak-banner-container">
-            <img src="header-banner.jpg" alt="AK Icon Trading & Contracting Co. W.L.L. Banner" class="ak-banner-img">
+    <!-- Header / Banner -->
+    <header>
+        <div class="brand-container">
+            <img src="https://raw.githubusercontent.com/RJD-Contracting/rjd-website/main/rjd-logo.png" alt="AK Icon Logo" class="logo-img" onerror="this.src='rjd-logo.png'">
+            <div class="logo">
+                <span class="logo-main-title" id="logo-main">AK ICON</span>
+                <span class="logo-sub-title" id="logo-sub">CONTRACTING & ENGINEERING</span>
+                <div class="logo-loc-box">
+                    <span class="logo-loc" id="company-loc">DOHA, QATAR</span>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <!-- Floating Language Switcher Button with Globe Symbol -->
-    <button class="ak-lang-floating" onclick="toggleLanguage()" id="lang-toggle-btn">
-        <span>🌐</span> <span id="lang-text">العربية</span>
-    </button>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/97455830871" class="ak-whatsapp-floating" target="_blank" title="Chat on WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-    </a>
+        <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">
+            <span id="lang-btn-text">العربية</span>
+        </button>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h2 id="hero-title">Premier Trading & Contracting Solutions in Qatar</h2>
-        <p id="hero-subtitle">Delivering high-quality civil contracting, MEP technical support, material procurement, and commercial supply solutions across Qatar.</p>
+        <h2 id="hero-title">Your Trusted Contracting & Engineering Partner in Qatar</h2>
+        <p id="hero-subtitle">Delivering Integrated MEP Solutions, Civil Construction, Fit-Out, Construction Manpower Supply, and Building Facilities Support in Qatar.</p>
     </section>
 
     <!-- Main Content -->
     <div class="container">
         <section>
-            <h2 class="section-title" id="about-title">About Us</h2>
+            <h2 class="section-title" id="about-title">About AK Icon</h2>
             <p id="about-desc" style="text-align: center; max-width: 850px; margin: 0 auto 40px; font-size: 1rem; color: var(--text-gray);">
-                AK Icon Trading & Contracting Co. W.L.L. is a Qatar-registered corporate entity in Doha. We specialize in comprehensive commercial trading, building material supply, MEP support, and civil contracting services tailored for infrastructure and construction projects in Qatar.
+                AK Icon is a Qatar-registered corporate solution provider based in Doha. We specialize in providing comprehensive engineering, construction fit-out, technical manpower, and facility services designed for commercial, residential, and infrastructure projects across Qatar.
             </p>
         </section>
 
+        <!-- Services Grid -->
         <section>
-            <h2 class="section-title" id="services-title">Our Capabilities</h2>
+            <h2 class="section-title" id="services-title">Our Core Services</h2>
             <div class="grid">
+                
+                <!-- MEP -->
                 <div class="card">
-                    <h3 id="s1-title">Commercial Trading & Supply</h3>
+                    <h3 id="s1-title">MEP Contracting</h3>
                     <ul>
-                        <li id="s1-1">Building & Construction Materials</li>
-                        <li id="s1-2">MEP & Electrical Supplies</li>
-                        <li id="s1-3">Safety & Industrial Equipment</li>
-                        <li id="s1-4">Hardware & Tools Procurement</li>
+                        <li id="s1-1">Electrical Power & Lighting Works</li>
+                        <li id="s1-2">Plumbing & Drainage Systems</li>
+                        <li id="s1-3">HVAC Ducting & Air Conditioning</li>
+                        <li id="s1-4">Fire Fighting & Alarm Systems</li>
                     </ul>
                 </div>
+
+                <!-- Civil -->
                 <div class="card">
-                    <h3 id="s2-title">Civil & General Contracting</h3>
+                    <h3 id="s2-title">Civil Construction & Fit-Out</h3>
                     <ul>
-                        <li id="s2-1">General Civil Works</li>
-                        <li id="s2-2">Structural & Masonry Works</li>
-                        <li id="s2-3">Commercial Fit-Out & Renovations</li>
-                        <li id="s2-4">Site Preparation & Support</li>
+                        <li id="s2-1">Civil Construction & Masonry</li>
+                        <li id="s2-2">Building Fit-Out & Gypsum Partitions</li>
+                        <li id="s2-3">Painting, Flooring & Tiling</li>
+                        <li id="s2-4">Renovations & Modifications</li>
                     </ul>
                 </div>
+
+                <!-- Manpower -->
                 <div class="card">
-                    <h3 id="s3-title">MEP Technical Support</h3>
+                    <h3 id="s3-title">Construction Manpower Supply</h3>
                     <ul>
-                        <li id="s3-1">Electrical Installation Support</li>
-                        <li id="s3-2">Plumbing & Piping Support</li>
-                        <li id="s3-3">HVAC Ducting & Fittings</li>
-                        <li id="s3-4">Sub-contracting Assistance</li>
+                        <li id="s3-1">Skilled & Semi-Skilled Workers</li>
+                        <li id="s3-2">Certified MEP Technicians</li>
+                        <li id="s3-3">General Laborers & Helpers</li>
+                        <li id="s3-4">Project Workforce Support</li>
                     </ul>
                 </div>
+
+                <!-- FM -->
                 <div class="card">
-                    <h3 id="s4-title">Technical Support & Operations</h3>
+                    <h3 id="s4-title">Facility Management & Maintenance</h3>
                     <ul>
-                        <li id="s4-1">Skilled Technical Manpower Support</li>
-                        <li id="s4-2">Site Operation Management</li>
-                        <li id="s4-3">Commercial Facility Support</li>
-                        <li id="s4-4">Project Maintenance Services</li>
+                        <li id="s4-1">Building & Systems Maintenance</li>
+                        <li id="s4-2">Preventive Scheduled Maintenance</li>
+                        <li id="s4-3">Emergency Breakdown Assistance</li>
+                        <li id="s4-4">Annual Maintenance Contracts (AMC)</li>
                     </ul>
                 </div>
+
             </div>
         </section>
 
-        <section style="margin-top: 50px;">
+        <!-- BOQ & Drawing Submission Form Section -->
+        <section class="rfq-section">
+            <h2 class="section-title" id="rfq-title" style="margin-bottom: 10px;">Request a Quote / Submit BOQ</h2>
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 25px; font-size: 0.95rem;" id="rfq-subtitle">
+                Upload your project BOQ, Drawings, or requirements to receive a fast, competitive quotation from our estimation team.
+            </p>
+            
+            <form class="rfq-form" onsubmit="submitRfq(event)">
+                <div class="form-group">
+                    <label id="lbl-name">Full Name / Company Name *</label>
+                    <input type="text" class="form-control" id="rfqName" required placeholder="Enter your name or company">
+                </div>
+                <div class="form-group">
+                    <label id="lbl-phone">Phone / WhatsApp Number *</label>
+                    <input type="text" class="form-control" id="rfqPhone" required placeholder="+974 XXXX XXXX">
+                </div>
+                <div class="form-group">
+                    <label id="lbl-service">Required Service Category *</label>
+                    <select class="form-control" id="rfqService">
+                        <option value="MEP Contracting">MEP Contracting (Electrical, HVAC, Plumbing)</option>
+                        <option value="Civil Construction & Fit-Out">Civil Construction & Fit-Out</option>
+                        <option value="Manpower Supply">Construction Manpower Supply</option>
+                        <option value="Facility Management">Facility Management & Maintenance</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label id="lbl-email">Email Address</label>
+                    <input type="email" class="form-control" id="rfqEmail" placeholder="email@example.com">
+                </div>
+
+                <!-- BOQ & Drawing File Upload Field -->
+                <div class="form-group full">
+                    <label id="lbl-file">Upload BOQ / Drawing / Project File (PDF, CAD, DOC, Images)</label>
+                    <div class="file-input-container">
+                        <input type="file" id="rfqFile" onchange="displayFileName(this)">
+                        <div class="file-input-label">
+                            <span class="upload-icon">📁</span>
+                            <span id="file-btn-text">Click or Drag & Drop BOQ/Drawing File Here</span>
+                            <span style="font-size: 0.78rem; opacity: 0.7;">Supported Formats: PDF, DWG, DOCX, PNG, JPG (Max: 25MB)</span>
+                        </div>
+                        <div class="selected-file-name" id="fileNameDisplay"></div>
+                    </div>
+                </div>
+
+                <div class="form-group full">
+                    <label id="lbl-details">Project Scope & Additional Requirements</label>
+                    <textarea class="form-control" id="rfqDetails" placeholder="Provide details about site location, estimated quantities, or special scope requirements..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="rfq-submit-btn">
+                    📲 Submit Quotation Request via WhatsApp
+                </button>
+            </form>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
             <div class="contact-box">
                 <h3 id="contact-title">Contact & Business Enquiries</h3>
                 <div class="contact-info">
-                    <p><strong><span id="c-company">AK Icon Trading & Contracting Co. W.L.L.</span></strong></p>
+                    <p><strong><span id="c-company">AK Icon Contracting & Engineering</span></strong></p>
                     <p>📍 <span id="c-location">Doha, Qatar</span></p>
-                    <p>📞 Phone / WhatsApp: <a href="tel:+97455830871">+974 5583 0871</a></p>
-                    <p>📧 Email: <a href="mailto:info.akicon.qatar@gmail.com">info.akicon.qatar@gmail.com</a></p>
+                    <p>📧 Email: <a href="mailto:info@akicon.qa">info@akicon.qa</a></p>
                 </div>
             </div>
         </section>
     </div>
 
+    <!-- Floating WhatsApp Widget -->
+    <div class="whatsapp-float-container">
+        <button class="whatsapp-main-btn" onclick="openDirectWhatsapp()" aria-label="WhatsApp Chat">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 AK Icon Trading & Contracting Co. W.L.L. Doha, Qatar. All Rights Reserved.</p>
+        <p>&copy; 2026 AK Icon. Doha, Qatar. All Rights Reserved.</p>
     </footer>
 
-    <!-- Multilingual Script -->
+    <!-- Script -->
     <script>
         const content = {
             en: {
+                logoMain: "AK ICON",
+                logoSub: "CONTRACTING & ENGINEERING",
+                companyLoc: "DOHA, QATAR",
                 langBtn: "العربية",
-                heroTitle: "Premier Trading & Contracting Solutions in Qatar",
-                heroSubtitle: "Delivering high-quality civil contracting, MEP technical support, material procurement, and commercial supply solutions across Qatar.",
-                aboutTitle: "About Us",
-                aboutDesc: "AK Icon Trading & Contracting Co. W.L.L. is a Qatar-registered corporate entity in Doha. We specialize in comprehensive commercial trading, building material supply, MEP support, and civil contracting services tailored for infrastructure and construction projects in Qatar.",
-                servicesTitle: "Our Capabilities",
-                s1Title: "Commercial Trading & Supply",
-                s1_1: "Building & Construction Materials", s1_2: "MEP & Electrical Supplies", s1_3: "Safety & Industrial Equipment", s1_4: "Hardware & Tools Procurement",
-                s2Title: "Civil & General Contracting",
-                s2_1: "General Civil Works", s2_2: "Structural & Masonry Works", s2_3: "Commercial Fit-Out & Renovations", s2_4: "Site Preparation & Support",
-                s3Title: "MEP Technical Support",
-                s3_1: "Electrical Installation Support", s3_2: "Plumbing & Piping Support", s3_3: "HVAC Ducting & Fittings", s3_4: "Sub-contracting Assistance",
-                s4Title: "Technical Support & Operations",
-                s4_1: "Skilled Technical Manpower Support", s4_2: "Site Operation Management", s4_3: "Commercial Facility Support", s4_4: "Project Maintenance Services",
+                heroTitle: "Your Trusted Contracting & Engineering Partner in Qatar",
+                heroSubtitle: "Delivering Integrated MEP Solutions, Civil Construction, Fit-Out, Construction Manpower Supply, and Building Facilities Support in Qatar.",
+                aboutTitle: "About AK Icon",
+                aboutDesc: "AK Icon is a Qatar-registered corporate solution provider based in Doha. We specialize in providing comprehensive engineering, construction fit-out, technical manpower, and facility services designed for commercial, residential, and infrastructure projects across Qatar.",
+                servicesTitle: "Our Core Services",
+                s1Title: "MEP Contracting",
+                s1_1: "Electrical Power & Lighting Works", s1_2: "Plumbing & Drainage Systems", s1_3: "HVAC Ducting & Air Conditioning", s1_4: "Fire Fighting & Alarm Systems",
+                s2Title: "Civil Construction & Fit-Out",
+                s2_1: "Civil Construction & Masonry", s2_2: "Building Fit-Out & Gypsum Partitions", s2_3: "Painting, Flooring & Tiling", s2_4: "Renovations & Modifications",
+                s3Title: "Construction Manpower Supply",
+                s3_1: "Skilled & Semi-Skilled Workers", s3_2: "Certified MEP Technicians", s3_3: "General Laborers & Helpers", s3_4: "Project Workforce Support",
+                s4Title: "Facility Management & Maintenance",
+                s4_1: "Building & Systems Maintenance", s4_2: "Preventive Scheduled Maintenance", s4_3: "Emergency Breakdown Assistance", s4_4: "Annual Maintenance Contracts (AMC)",
                 contactTitle: "Contact & Business Enquiries",
-                cCompany: "AK Icon Trading & Contracting Co. W.L.L.",
-                cLocation: "Doha, Qatar"
+                cCompany: "AK Icon Contracting & Engineering",
+                cLocation: "Doha, Qatar",
+                rfqTitle: "Request a Quote / Submit BOQ",
+                rfqSubtitle: "Upload your project BOQ, Drawings, or requirements to receive a fast, competitive quotation from our estimation team.",
+                lblNam: "Full Name / Company Name *",
+                lblPho: "Phone / WhatsApp Number *",
+                lblSer: "Required Service Category *",
+                lblEma: "Email Address",
+                lblFil: "Upload BOQ / Drawing / Project File (PDF, CAD, DOC, Images)",
+                fileText: "Click or Drag & Drop BOQ/Drawing File Here",
+                lblDet: "Project Scope & Additional Requirements",
+                rfqBtn: "📲 Submit Quotation Request via WhatsApp"
             },
             ar: {
+                logoMain: "إيه كيه أيقون",
+                logoSub: "للمقاولات والهندسة",
+                companyLoc: "الدوحة، قطر",
                 langBtn: "English",
-                heroTitle: "حلول التجارة والمقاولات الرائدة في قطر",
-                heroSubtitle: "تقديم خدمات المقاولات المدنية عالية الجودة، الدعم الفني الكهروميكانيكي، توريد المواد، والحلول التجارية في قطر.",
-                aboutTitle: "من نحن",
-                aboutDesc: "شركة اي কে আইকন للتجارة والمقاولات ذ.م.م هي شركة مسجلة في قطر ومقرها الدوحة. نحن متخصصون في التجارة التجارية، توريد مواد البناء، دعم الأعمال الكهروميكانيكية، والمقاولات المدنية.",
-                servicesTitle: "قدراتنا وخدماتنا",
-                s1Title: "التجارة والتوريدات التجارية",
-                s1_1: "مواد البناء والإنشاءات", s1_2: "مستلزمات الكهرباء والكهروميكانيك", s1_3: "معدات السلامة والمعدات الصناعية", s1_4: "توريد الأدوات والأجهزة",
-                s2Title: "المقاولات المدنية والعامة",
-                s2_1: "أعمال البناء المدني العام", s2_2: "الأعمال الهيكلية والبناء", s2_3: "التجهيزات الديكورية والتجديد التجاري", s2_4: "تجهيز المواقع والدعم",
-                s3Title: "الدعم الفني الكهروميكانيكي (MEP)",
-                s3_1: "دعم التركيبات الكهربائية", s3_2: "دعم أجهزة السباكة والأنابيب", s3_3: "تركيبات التكييف (HVAC)", s3_4: "خدمات المقاولات الفرعية",
-                s4Title: "الدعم الفني والعمليات",
-                s4_1: "دعم العمالة الفنية الماهرة", s4_2: "إدارة عمليات الموقع", s4_3: "دعم المنشآت التجارية", s4_4: "خدمات صيانة المشاريع",
+                heroTitle: "شريكك الموثوق للمقاولات والهندسة في قطر",
+                heroSubtitle: "تقديم حلول الكهروميكانيك المتكاملة (MEP)، البناء المدني، التجهيزات، توريد العمالة، وإدارة المنشآت في قطر.",
+                aboutTitle: "عن إيه كيه أيقون",
+                aboutDesc: "إيه كيه أيقون هي شركة مسجلة في قطر ومقرها الدوحة. نحن متخصصون في تقديم الحلول الهندسية المتكاملة، التجهيزات الداخلية، وتوريد العمالة الفنية للمشاريع التجارية والسكينة.",
+                servicesTitle: "خدماتنا الرئيسية",
+                s1Title: "مقاولات الكهروميكانيك (MEP)",
+                s1_1: "أعمال الكهرباء والإنارة", s1_2: "أنظمة السباكة والصرف الصحي", s1_3: "أنظمة التكييف والتهوية", s1_4: "أنظمة الإطفاء وإنذار الحريق",
+                s2Title: "البناء المدني والتجهيزات (Fit-Out)",
+                s2_1: "أعمال البناء والإنشاءات المدنية", s2_2: "التجهيزات الداخلية وقواطع الجبس", s2_3: "الأصباغ والتبليط والأرضيات", s2_4: "أعمال التجديد والتعديلات",
+                s3Title: "توريد العمالة لمشاريع البناء",
+                s3_1: "عمالة ماهرة وشبه ماهرة", s3_2: "فنيو كهروميكانيك معتمدون", s3_3: "عمالة عامة ومساعدون", s3_4: "دعم الكوادر للمشاريع",
+                s4Title: "إدارة المنشآت والصيانة",
+                s4_1: "صيانة المباني والأنظمة", s4_2: "الصيانة الوقائية المجدولة", s4_3: "خدمات الطوارئ والأعطال", s4_4: "عقود الصيانة السنوية (AMC)",
                 contactTitle: "التواصل والاستفسارات التجارية",
-                cCompany: "شركة ای কে আইকন للتجارة والمقاولات ذ.م.م",
-                cLocation: "الدوحة، قطر"
+                cCompany: "إيه كيه أيقون للمقاولات والهندسة",
+                cLocation: "الدوحة، قطر",
+                rfqTitle: "طلب عرض سعر / تقديم جدول الكميات (BOQ)",
+                rfqSubtitle: "قم بتقديم جدول الكميات أو المخططات للحصول على عرض سعر سريع ومنافس.",
+                lblNam: "الاسم الكامل / اسم الشركة *",
+                lblPho: "رقم الهاتف / واتساب *",
+                lblSer: "فئة الخدمة المطلوبة *",
+                lblEma: "عنوان البريد الإلكتروني",
+                lblFil: "تحميل جدول الكميات / المخططات (PDF, CAD, DOC, Images)",
+                fileText: "انقر أو اسحب ملف جدول الكميات/المخططات هنا",
+                lblDet: "تفاصيل ومتطلبات المشروع",
+                rfqBtn: "📲 إرسال طلب عرض السعر عبر واتساب"
             }
         };
 
@@ -433,7 +755,10 @@
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 
             const l = content[currentLang];
-            document.getElementById('lang-text').innerText = l.langBtn;
+            document.getElementById('logo-main').innerText = l.logoMain;
+            document.getElementById('logo-sub').innerText = l.logoSub;
+            document.getElementById('company-loc').innerText = l.companyLoc;
+            document.getElementById('lang-btn-text').innerText = l.langBtn;
             document.getElementById('hero-title').innerText = l.heroTitle;
             document.getElementById('hero-subtitle').innerText = l.heroSubtitle;
             document.getElementById('about-title').innerText = l.aboutTitle;
@@ -467,6 +792,49 @@
             document.getElementById('contact-title').innerText = l.contactTitle;
             document.getElementById('c-company').innerText = l.cCompany;
             document.getElementById('c-location').innerText = l.cLocation;
+
+            document.getElementById('rfq-title').innerText = l.rfqTitle;
+            document.getElementById('rfq-subtitle').innerText = l.rfqSubtitle;
+            document.getElementById('lbl-name').innerText = l.lblNam;
+            document.getElementById('lbl-phone').innerText = l.lblPho;
+            document.getElementById('lbl-service').innerText = l.lblSer;
+            document.getElementById('lbl-email').innerText = l.lblEma;
+            document.getElementById('lbl-file').innerText = l.lblFil;
+            document.getElementById('file-btn-text').innerText = l.fileText;
+            document.getElementById('lbl-details').innerText = l.lblDet;
+            document.getElementById('rfq-submit-btn').innerText = l.rfqBtn;
+        }
+
+        function displayFileName(input) {
+            const display = document.getElementById('fileNameDisplay');
+            if (input.files && input.files[0]) {
+                display.innerText = "Attached File: " + input.files[0].name;
+            } else {
+                display.innerText = "";
+            }
+        }
+
+        function openDirectWhatsapp() {
+            window.open('https://wa.me/97450098805?text=Hello%20AK%20Icon%20Team,%20I%20am%20inquiring%20from%20your%20website.', '_blank');
+        }
+
+        function submitRfq(event) {
+            event.preventDefault();
+            const name = document.getElementById('rfqName').value;
+            const phone = document.getElementById('rfqPhone').value;
+            const service = document.getElementById('rfqService').value;
+            const email = document.getElementById('rfqEmail').value || 'N/A';
+            const details = document.getElementById('rfqDetails').value || 'N/A';
+            const fileInput = document.getElementById('rfqFile');
+            
+            let fileNotice = "No file attached";
+            if (fileInput.files && fileInput.files[0]) {
+                fileNotice = `Attached File Name: ${fileInput.files[0].name} (Sending via Chat)`;
+            }
+
+            const msg = `Hello AK Icon Estimation Team,%0AI would like to submit a Quotation / BOQ Enquiry.%0A%0A*Name / Company:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Category:* ${encodeURIComponent(service)}%0A*Email:* ${encodeURIComponent(email)}%0A*File Status:* ${encodeURIComponent(fileNotice)}%0A*Project Details:* ${encodeURIComponent(details)}`;
+            
+            window.open(`https://wa.me/97450098805?text=${msg}`, '_blank');
         }
     </script>
 </body>
